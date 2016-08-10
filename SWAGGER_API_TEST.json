@@ -1,0 +1,56 @@
+{
+	"id": "6ef12027-d09b-6a37-e554-a3087bf546ec",
+	"name": "SWAGGER_API_TEST",
+	"description": "Swagger API for Test",
+	"order": [
+		"ea57fc4b-ec46-f0f9-d991-d9f7fbacf02c",
+		"b6f56ff4-bc7d-3513-babd-b9377bc934a7"
+	],
+	"folders": [],
+	"timestamp": 1470628322132,
+	"owner": 0,
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"id": "b6f56ff4-bc7d-3513-babd-b9377bc934a7",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:8080/landlords",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1470707035726,
+			"name": "Create New Landlord",
+			"description": "",
+			"collectionId": "6ef12027-d09b-6a37-e554-a3087bf546ec",
+			"responses": [],
+			"rawModeData": "{\r\n  \"firstName\": \"ATAUR\",\r\n  \"lastName\": \"TEST2\",\r\n  \"trusted\": false\r\n}"
+		},
+		{
+			"id": "ea57fc4b-ec46-f0f9-d991-d9f7fbacf02c",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://localhost:8080/landlords",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 201;\n\n\n\n\n\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"Verify First Name\"] = jsonData.firstName === \"ABU\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1470707132960,
+			"name": "Get All Landlords",
+			"description": "",
+			"collectionId": "6ef12027-d09b-6a37-e554-a3087bf546ec",
+			"responses": [],
+			"rawModeData": "{\r\n  \"firstName\": \"ABD\",\r\n  \"lastName\": \"SAM\",\r\n  \"trusted\": false\r\n}"
+		}
+	]
+}
